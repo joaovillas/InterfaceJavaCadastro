@@ -79,7 +79,7 @@ private InternalAjuda Ajuda;
         jDesktopPane1Layout.setHorizontalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDesktopPane1Layout.createSequentialGroup()
-                .addContainerGap(377, Short.MAX_VALUE)
+                .addContainerGap(498, Short.MAX_VALUE)
                 .addComponent(labelStatusLogin)
                 .addGap(23, 23, 23))
         );
@@ -156,7 +156,8 @@ private InternalAjuda Ajuda;
             .addComponent(jDesktopPane1)
         );
 
-        pack();
+        setSize(new java.awt.Dimension(537, 357));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     
@@ -189,9 +190,15 @@ private InternalAjuda Ajuda;
     }//GEN-LAST:event_loginTelaLoginActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+
+    if(telaAdmin.getStatusLogin()==true){    
+        
     InternalFrameCadastro cadastro = new InternalFrameCadastro();
     jDesktopPane1.add(cadastro);
     cadastro.setVisible(true);
+    }else{
+        JOptionPane.showMessageDialog(null, "Voce Precisa Estar Logado para Realizar esta ação");
+    }
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
